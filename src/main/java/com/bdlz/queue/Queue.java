@@ -1,22 +1,26 @@
 package com.bdlz.queue;
+
 import com.bdlz.queue.MyLinkedList;
-	
 
-	public class Queue<K> extends MyLinkedList<K>{
+import com.bdlz.queue.INode;
 
-		private final MyLinkedList myLinkedList;
+public class Queue<K> extends MyLinkedList<K> {
 
-		public Queue() {
-			this.myLinkedList = new MyLinkedList<>();
-		}
-		
-		public void enque(INode myNode) {
-			myLinkedList.append(myNode);
-		}
+	private final MyLinkedList myLinkedList;
 
-		public INode peak() {
-			return myLinkedList.head;
-		}
-		
+	public Queue() {
+		this.myLinkedList = new MyLinkedList<>();
 	}
 
+	public void enque(INode myNode) {
+		myLinkedList.append(myNode);
+	}
+
+	public INode peak() {
+		return myLinkedList.head;
+	}
+
+	public INode deque() {
+		return myLinkedList.pop();
+	}
+}
