@@ -119,5 +119,12 @@ public class MyLinkedList<K> {
 			tempNode1.setNext(LastNode);
 			return this.head;
 		}
+		public boolean isEmpty() {
+			if(this.head == null)
+				return true;
+			else
+				return false;
+		}
 	}
+
 
